@@ -1,0 +1,337 @@
+:root {
+  --nav: rgba(0, 1, 1, 0.3) 3px 1px 4px;
+  --black: #e71919;
+  --shadow: rgba(230, 98, 10, 0.5) 2px 0px 20px 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: whitesmoke;
+  .rotate-on-hover {
+    transition: transform 0.3s ease; /* Smooth transition */
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .dark-mode {
+    background-color: #333;
+    color: white;
+  }
+
+  .rotate-on-hover {
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  .rotate-on-hover:hover {
+    transform: rotate(360deg); /* Rotate 360 degrees on hover */
+  }
+  .lastSection {
+    color: #1e1c1c;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 5px;
+    padding-top: 300px;
+    z-index: 1;
+    width: 100%;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+  }
+  .login-btn {
+    height: 35px;
+    width: 80px;
+    border: none;
+    box-shadow: var(--nav);
+    background-color: whitesmoke;
+  }
+
+  #lib {
+    margin-left: 370px;
+    padding-top: 20px;
+    font-family: serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(127, 7, 7);
+  }
+  .login-btn:hover {
+    background-color: #fff;
+  }
+  .light-btn {
+    font-size: 30px;
+    color: #e91212;
+    cursor: pointer;
+    border: none;
+  }
+  .light-btn:hover {
+    color: #1e1c1c;
+  }
+  .nav-btn {
+    position: absolute;
+    left: 70%;
+    top: 35px;
+    color: #1e1c1c;
+  }
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 9; /* Below the form, above other content */
+  }
+  .content {
+    transition: filter 0.3s ease;
+  }
+
+  .blurred {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interaction with blurred content */
+  }
+
+  #focus-form {
+    position: relative;
+    z-index: 10; /* Make sure the form stays on top of the blurred content */
+    background: rgb(226, 205, 205);
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  nav {
+    height: 6em;
+    width: auto;
+    background-color: white;
+
+    box-shadow: var(--nav);
+  }
+  h1 {
+    margin-left: 400px;
+    padding-top: 20px;
+    font-family: serif;
+    font-size: 40px;
+    color: #9a2323;
+  }
+  button[type="button"] {
+    background-color: #f1ebeb;
+    height: 3em;
+    width: 5em;
+    align-items: center;
+    margin-bottom: 10px;
+    border: none;
+    background-color: whitesmoke;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  button:hover {
+    background-color: rgb(221, 207, 177);
+  }
+  input[type="submit"] {
+    background-color: #e9366f;
+    height: 45px;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 40px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    color: whitesmoke;
+  }
+  input[type="submit"]:hover {
+    background-color: #de825a;
+  }
+  .warning {
+    border: 2px solid #f39389;
+    border-radius: 2px;
+    padding: 10px;
+    position: absolute;
+    background-color: #fbd8d4;
+    color: #3b3c40;
+  }
+
+  .have {
+    margin-left: 0px;
+    align-items: center;
+    padding-left: 50px;
+    margin-top: 1px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .adder {
+    height: 5em;
+    width: 10em;
+
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    font-weight: 700;
+  }
+  .adder:hover {
+    background-color: rgb(221, 207, 177);
+  }
+
+  .bookForm {
+    position: fixed;
+    height: 400px;
+    width: 300px;
+    left: 45%;
+    top: 30%;
+    margin: auto;
+    background-color: wheat;
+    align-items: center;
+    padding-left: 30px;
+    border-radius: 20px;
+    margin: auto;
+    z-index: 9;
+  }
+  input {
+    margin-top: 15px;
+    border: none;
+    padding: 15px;
+    width: 220px;
+    border-radius: 8px;
+  }
+  input:focus {
+    outline: none;
+  }
+  input[type="checkbox"] {
+    margin-top: 20px;
+    margin-left: 0px;
+    height: 20px;
+    width: 35px;
+    cursor: pointer;
+    background-color: #d61313;
+  }
+  .formtitle {
+    padding-top: 30px;
+    margin-top: 5px;
+    margin-left: 35px;
+    font-size: 30px;
+  }
+
+  .storeBook {
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    margin-left: 10%;
+    margin-right: 50%;
+    margin-top: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+  }
+  #library {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .card-header {
+    background: white;
+  }
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-family: serif;
+    padding-top: 5px;
+    color: black;
+    font-weight: bolder;
+  }
+  .author {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+  }
+
+  .card-body {
+    margin-top: 0%;
+    height: 2px;
+    background-color: white;
+  }
+  .page {
+    text-align: center;
+    padding-top: 0px;
+  }
+  .read-status {
+    margin-bottom: 5px;
+
+    margin-top: 2px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .toggle-read-btn {
+    position: fixed;
+    color: wheat;
+    border: none;
+    height: 40px;
+    width: 250px;
+    margin-left: 20px;
+    bottom: -100px;
+    position: relative;
+  }
+  .remove-btn {
+    border: none;
+    height: 26px;
+    width: 25px;
+    margin-left: 1px;
+    margin-top: 1px;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  .remove-btn:hover {
+    background-color: rgb(209, 48, 48);
+    color: white;
+  }
+
+  @media (max-width: 1590px) {
+    #lib {
+      margin-left: 50px;
+      padding-top: 20px;
+      font-family: serif;
+      font-size: 40px;
+      color: rgb(127, 7, 7);
+    }
+    .storeBook {
+      background-color: white;
+      height: 300px;
+      width: 300px;
+      margin-left: 0%;
+      margin-right: 20%;
+      margin-top: 5px;
+
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    #library {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .nav-btn {
+      position: absolute;
+      left: 70%;
+      top: 35px;
+      color: #1e1c1c;
+    }
+  }
+}
